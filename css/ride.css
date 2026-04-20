@@ -1,128 +1,57 @@
-/* QuantumGo Ride Page - Futuristic Map Theme */
-
-body {
-    margin: 0;
+html, body, #main, #map {
     padding: 0;
-    font-family: 'fairplex-wide', system-ui, sans-serif;
-    background: #0a0a2e;
-    color: #ffffff;
-    overflow: hidden;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
-/* Header */
-.panel-heading {
-    background: rgba(10, 10, 46, 0.95) !important;
-    border-bottom: 1px solid rgba(0, 245, 255, 0.3);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(10px);
+.info {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    width: 275px;
+    background: transparent;
+}
+
+.info .panel-body {
+    background: transparent;
 }
 
 #request {
-    background: linear-gradient(45deg, #00f5ff, #ff00ff) !important;
-    color: #000 !important;
-    font-weight: 700;
-    padding: 12px 24px;
-    border-radius: 50px;
-    border: none;
-    box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
-    transition: all 0.3s ease;
+    position: relative;
+    background: #fcc1d4 none repeat scroll 0 0;
+    color: #000;
+    border-color: #000;
+    border-radius: 5px;
+    text-align: center;
+    width: 135px;
 }
 
-#request:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+#request:disabled {
+    color: #999;
+    border-color: #999;
 }
 
-/* Map Container */
-#main #map {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+#accountLink {
+    background: inherit;
 }
 
-/* Info Panel */
-.info.panel {
-    position: absolute;
-    top: 80px;
-    left: 20px;
-    width: 320px;
-    background: rgba(15, 15, 50, 0.92) !important;
-    border: 1px solid rgba(0, 245, 255, 0.4);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    z-index: 10;
-    backdrop-filter: blur(12px);
-}
-
-.panel-body {
-    padding: 15px 20px;
-    color: #ddd;
+#updates {
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
 }
 
 #updates li {
-    margin-bottom: 8px;
-    font-size: 15px;
-}
-
-/* Dropdown */
-.dropdown-menu {
-    background: #1a1a3d;
-    border: 1px solid #00f5ff;
-    color: white;
-}
-
-/* Messages */
-.configMessage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.85);
-}
-
-.panel-default {
-    background: #0f0f2e;
-    border: 1px solid #00f5ff;
-    max-width: 500px;
-}
-
-/* Auth Token Modal */
-.modal-content {
-    background: #0f0f2e;
-    border: 1px solid #ff00ff;
-    color: white;
-}
-
-.modal-header {
-    border-bottom: 1px solid #00f5ff;
+    margin: 3px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    padding: 5px;
 }
 
 .authToken {
+    word-wrap: break-word;
     width: 100%;
-    height: 120px;
-    background: #1a1a3d;
-    color: #00f5ff;
-    border: 1px solid #00f5ff;
-    border-radius: 8px;
-    padding: 12px;
-    font-family: monospace;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .info.panel {
-        width: 90%;
-        left: 5%;
-    }
 }
